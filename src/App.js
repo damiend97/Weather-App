@@ -1,28 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import WeatherCard from './components/WeatherCard';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+    constructor(props) {
+        super(props)
 
+        this.state = {
+            data: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday',].map((day, i) => ({
+                day,
+                temp: (100 - (i*10))
+            }))
+        }
+    }
+
+    render() {
+        return (
+            <div className="App">
+                <div className="cards">
+                    {this.state.data.map(card => <WeatherCard key={card.day} data={card}></WeatherCard>)}
+                </div>
+            </div>
+        );
+    }
+}
 export default App;

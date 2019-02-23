@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "weatherapp": "weather-app-ddd",
+    "default": "weather-app-ddd"
+  }
+}
