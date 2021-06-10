@@ -10,10 +10,10 @@ Visit https://weather-app-ddd.web.app/ to view my live hosted application.
 
 ## Download
 ```
-git clone https://github.com/damiend97/Social-Card-App/
+git clone https://github.com/damiend97/Weather-App/
 ```
 ```
-cd Social-Card-App
+cd Weather-App
 ```
 ```
 npm install
